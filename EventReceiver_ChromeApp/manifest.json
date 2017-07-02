@@ -1,0 +1,19 @@
+﻿{
+  // Required
+  "manifest_version": 2,
+  "name": "C#Event2ChromeApp",
+  "version": "0.0.1",
+  "sockets": { 
+  	"udp": {
+      "bind": ["*"],
+      "send": ["*"]
+    }
+  },
+  "app": {
+    "background": {
+      "scripts": ["main.js"]
+    }
+  },
+  "permissions":["system.network","notifications"]
+
+}

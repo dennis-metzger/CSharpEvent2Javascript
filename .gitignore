@@ -1,0 +1,4 @@
+EventEmitter_C#/EventEmitter/bin
+EventEmitter_C#/EventEmitter/obj
+*.suo
+EventReceiver_Node/node_modules

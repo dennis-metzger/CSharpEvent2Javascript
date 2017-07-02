@@ -1,0 +1,18 @@
+﻿<html>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+	</head>
+	<body>
+		<script>
+			var socket = io.connect('http://localhost:3000');
+			socket.on('eventReceived', function (data) {
+				var contentDiv = document.getElementById('received');
+  				contentDiv.innerHTML = '<span>' + data + '</span></br>';
+  				contentDiv.scrollTop = contentDiv.scrollHeight;
+
+  				socket.emit("jsEvent", data.replace('"event"', '"ping"'));
+			});
+		</script>
+		Data from C#: <div id="received" style="overflow-y:scroll;height:200px;"></div>
+	</body>
+</html>
